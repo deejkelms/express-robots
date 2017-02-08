@@ -1,0 +1,25 @@
+<% robot_path = '/robots/'+robot.id %>
+<% edit_tobot_path = '/robots/'+robot.id+'/edit' %>
+<% destroy_robot_path = '/robots/'+robot.id+'/edit' %>
+
+<tr>
+  <td><%= robot.id %></td>
+  <td><a href="<%= robot_path %>"><%= robot.name %></a></td>
+  <td><%= robot.description %></td>
+  <td><%= moment(robot.created_at).tz(moment.tz.guess(robot.created_at)).format('YYYY-MM-DD [at] HH:mm:ss zz') %></td>
+  <td><%= moment(robot.updated_at).tz(moment.tz.guess(robot.updated_at)).format('YYYY-MM-DD [at] HH:mm:ss zz') %></td>
+  <td>
+    <form action="<%= edit_robot_path %>" method='GET'>
+      <button class='btn btn-warning' type='submit'>
+        <span class="glyphicon glyphicon-pencil"></span> edit
+      </button>
+    </form>
+  </td>
+  <td>
+    <form action="<%= destroy_robot_path %>" method='POST'>
+      <button class='btn btn-danger' type='submit'>
+        <span class="glyphicon glyphicon-trash"></span> delete
+      </button>
+    </form>
+  </td>
+</tr>
