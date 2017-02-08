@@ -2,14 +2,15 @@
 <html>
   <% include ../_head %>
   <body>
-      <% include ../_header %>
+    <% include ../_header %>
 
-      <table class="table table-bordered table-hover table-responsive" style="width:100%">
-        <% include table/_header_row %>
-        <% robots.forEach(function(robot){ %>
-          <% include table/_row %>
-          <% }); %>
-      </table>
+    <table class="table table-bordered table-hover table-responsive" style="width:100%">
+      <% include table/_header_row %>
+      <% robots.forEach(function(robot){ %>
+        <% include table/_row %>
+      <% }); %>
+    </table>
+
     <% include ../_footer %>
   </body>
 </html>
