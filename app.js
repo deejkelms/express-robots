@@ -9,8 +9,8 @@ var flash = require('connect-flash');     // enables flash messages
 var moment = require('moment-timezone');  // enables date string formatting
 
 
-var home_routes = require('.app/controllers/home_controller');
-var users = require('.app/controllers/robots_controller');
+var home_routes = require('./app/controllers/home_controller');
+var robot_routes = require('./app/controllers/robots_controller');
 
 var sessionStore = new session.MemoryStore; // the default memory store for sessions in the development environment
 
